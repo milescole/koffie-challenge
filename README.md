@@ -15,7 +15,9 @@ Export a file containing all currently cached VINs in a table stored in parquet 
 
 ## Setup
 Run server with uvicorn main:app --reload
+
 View Swagger UI at http://127.0.0.1:8000/docs
+
 Run tests with pytest
 
 
