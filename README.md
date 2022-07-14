@@ -42,10 +42,15 @@ curl -X 'POST' \
 
 {
   "vin": "1XPWD40X1ED215307",
+  
   "make": "PETERBILT",
+  
   "model": "388",
+  
   "model_year": "2014",
+  
   "body_class": "Truck-Tractor",
+  
   "cached": true
 }
 
@@ -68,6 +73,7 @@ curl -X 'POST' \
 
 {
   "vin": "1XPWD40X1ED215307",
+  
   "deleted": True
 }
 
