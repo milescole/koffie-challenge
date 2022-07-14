@@ -72,14 +72,6 @@ async def root(vin: schemas.VinModel, db: Session=Depends(get_db)):
 @app.get("/export")
 async def root(db: Session=Depends(get_db)):
     data = crud.get_all(db=db)
-    # return data
-    # table = pa.table({'n_legs': [2, 2, 4, 4, 5, 100], 'animal': ["Flamingo", "Parrot", "Dog", "Horse",  "Brittle stars", "Centipede"]})
-    # pq.write_table(table, 'example.parquet')
-    # parquet_file = pq.ParquetFile('example.parquet')
-    # return FileResponse(parquet_file)
-    # bytes_data = df.to_parquet()
-    # buffer = io.BytesIO(bytes_data)
-    # return StreamingResponse(buffer)
     df = pd.DataFrame([t.__dict__ for t in data], columns = ['vin', 'make', 'model', 'model_year', 'body_class'])
     df.to_parquet("vehicles.parquet")
     print(df.info())
