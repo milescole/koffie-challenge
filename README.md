@@ -70,7 +70,7 @@ curl -X 'POST' \
 }
 
 
-### Export parquet file
+### Export file
 > This route will export the SQLite database cache and return a binary file (parquet format) containing the data in the cache.
 
 #### Request
